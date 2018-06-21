@@ -9,7 +9,7 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 100px;
   padding: 20px;
   color: white;
 }
@@ -20,6 +20,35 @@
 
 .App-intro {
   font-size: large;
+  margin: 1em;
+}
+
+.ernest {
+  float: left;
+  margin-top: 5em;
+  max-width: 50%;
+  height: 100%;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1em;
+  cursor: auto;
+}
+
+.bubble {
+  position: absolute;
+  right: 10px;
+  margin-top: -2em;
+}
+
+.speech{
+  position: absolute;
+  right: 150px;
+  top: 300px;
+  width: 250px;
 }
 
 @keyframes App-logo-spin {
