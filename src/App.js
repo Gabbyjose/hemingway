@@ -5,7 +5,8 @@ import axios from 'axios';
 import hemingway from './Hemingway.jpg';
 import fitzgerald from './Fitzgerald.jpg';
 import faulkner from './Faulkner.jpg';
-import defaultImage from './default-person.jpg'
+import defaultImage from './default-person.jpg';
+import HemingwayFaulkner from './HemingwayFaulkner.jpeg'
 
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
     if (name === 'Hemingway') this.setState({image: hemingway})
     if (name === 'Faulkner') this.setState({image: faulkner})
     if (name === 'Fitzgerald') this.setState({image: fitzgerald})
+    if (name === 'HemingwayFaulkner') this.setState({image: HemingwayFaulkner})
 
     this.setState({words: data})
 
@@ -37,6 +39,7 @@ class App extends Component {
           <button onClick={this.handleClick} value="Hemingway">Ernest</button>
           <button onClick={this.handleClick} value="Faulkner">William</button>
           <button onClick={this.handleClick} value="Fitzgerald">F. Scott</button>
+          <button onClick={this.handleClick} value="HemingwayFaulkner">Ernest & William</button>
         </header>
         <div className="App-intro">
           <img src={speech} alt={speech} className="bubble" />

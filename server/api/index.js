@@ -4,7 +4,7 @@ Router.use('/:name', (req, res, next) => {
   const authorName = req.params.name
   const {spawn} = require("child_process");
   const pythonProcess = spawn('python', ["./ernest.py", authorName])
-
+  console.log(authorName)
   pythonProcess.stdout.on('data', function (data){
     res.json(data.toString('utf8').trim())
   });

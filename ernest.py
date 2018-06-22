@@ -15,17 +15,23 @@ with open(faulk_file) as f:
 with open(fitz_file) as f:
     fitzgerald = f.read()
 
+hem_model = markovify.Text(ernest)
+fitz_model = markovify.Text(fitzgerald)
+faulkner_model = markovify.Text(faulkner)
+
 if sys.argv[1] == 'Hemingway':
-    hem_model = markovify.Text(ernest)
     hem_text = hem_model.make_sentence()
     print(hem_text)
 
 if sys.argv[1] == 'Faulkner':
-    faulkner_model = markovify.Text(faulkner)
     faulk_text = faulkner_model.make_sentence()
     print(faulk_text)
 
 if sys.argv[1] == 'Fitzgerald':
-    fitz_model = markovify.Text(fitzgerald)
     fitz_text = fitz_model.make_sentence()
     print(fitz_text)
+
+if sys.argv[1] == 'HemingwayFaulkner':
+    hf_model = markovify.combine([hem_model, faulkner_model])
+    hf_text = hf_model.make_sentence()
+    print(hf_text)
