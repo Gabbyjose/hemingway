@@ -39,7 +39,8 @@ class App extends Component {
           <button onClick={this.handleClick} value="Hemingway">Ernest</button>
           <button onClick={this.handleClick} value="Faulkner">William</button>
           <button onClick={this.handleClick} value="Fitzgerald">F. Scott</button>
-          <button onClick={this.handleClick} value="HemingwayFaulkner">Ernest & William</button>
+          <button onClick={this.handleClick} value="HemingwayFaulkner">Faulkingway</button>
+          <button onClick={this.handleClick} value="HemingwayShakespeare">HemingSpeare</button>
         </header>
         <div className="App-intro">
           <img src={speech} alt={speech} className="bubble" />
