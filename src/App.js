@@ -1,20 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import speech from './speechBubble.png';
+import paper from './old_paper.png';
+import pen from './old-pen.png'
 import axios from 'axios';
-import hemingway from './Hemingway.jpg';
-// import fitzgerald from './Fitzgerald.jpg';
-// import faulkner from './Faulkner.jpg';
-import defaultImage from './default-person.jpg';
-import HemingwayFaulkner from './HemingwayFaulkner.jpeg'
-
 
 class App extends Component {
   constructor(){
     super()
     this.state = {
-      words: '',
-      image: defaultImage
+      words: ''
     }
     this.handleClick = this.handleClick.bind(this)
   }
@@ -23,29 +17,21 @@ class App extends Component {
     this.setState({words: "Let me think..."})
     const name = evt.target.value
     const {data} = await axios.get(`/api/${name}`);
-    if (name === 'Hemingway') this.setState({image: hemingway})
-    if (name === 'HemingwayFaulkner') this.setState({image: HemingwayFaulkner})
-
     this.setState({words: data})
-
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
           <h1 className="App-title">Talk Ernest To Me</h1>
           <button onClick={this.handleClick} value="Hemingway">Ernest</button>
-          {//<button onClick={this.handleClick} value="Faulkner">William</button><button onClick={this.handleClick} value="Fitzgerald">F. Scott</button>
-          }
           <button onClick={this.handleClick} value="HemingwayFaulkner">Faulkingway</button>
           <button onClick={this.handleClick} value="HemingwayShakespeare">HemingSpeare</button>
           <button onClick={this.handleClick} value="Austeningway">Austeningway</button>
-        </header>
         <div className="App-intro">
-          <img src={speech} alt={speech} className="bubble" />
-          <p className="speech">{this.state.words}</p>
-          <img src={this.state.image} className="ernest" alt="war-time-ernest" />
+          <img src={paper} alt={paper} className="paper" />
+          <p className="words">{this.state.words}</p>
+          <img src={pen} alt={pen} className="pen" />
         </div>
       </div>
     );

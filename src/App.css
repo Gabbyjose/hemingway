@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  font-family: "Lucida Calligraphy", "American Typerwriter", cursive;
+  background-image: url("desk.jpg");
+  height: 150vh;
 }
 
 .App-logo {
@@ -8,26 +11,24 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-image: url("wooden-sign.jpg");
+  background-size: 100%;
   height: 100px;
   padding: 20px;
   color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+  margin: 0;
+  padding: .5em;
+  color: silver;
 }
 
 .App-intro {
   font-size: large;
-  margin: 1em;
-}
-
-.ernest {
-  float: left;
-  margin-top: 5em;
-  max-width: 50%;
-  height: 100%;
+  padding: 2em;
+  position: relative;
+  text-align: center;
 }
 
 button {
@@ -38,17 +39,27 @@ button {
   cursor: auto;
 }
 
-.bubble {
+.words {
+  text-align: center;
+  z-index: 5;
+  padding: 10px;
   position: absolute;
-  right: 10px;
-  margin-top: -2em;
+  width: 35%;
+  left: 30%;
+  top: 100px;
+  font-family: "Lucida Calligraphy", "American Typerwriter", cursive;
 }
 
-.speech{
+.pen {
+  float: right;
+  width: 20%;
+}
+
+.paper {
+  width: 45%;
+  z-index: 1;
   position: absolute;
-  right: 150px;
-  top: 300px;
-  width: 250px;
+  left: 25%;
 }
 
 @keyframes App-logo-spin {
