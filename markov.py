@@ -24,13 +24,10 @@ hem_model = markovify.Text(ernest, state_size=3)
 pickle.dump(hem_model, open( "save.hem", "wb" ))
 
 faulkner_model = markovify.Text(faulkner, state_size=3)
-pickle.dump(faulkner_model, open( "save.faulk", "wb" ))
 
 shake_model = markovify.Text(shakespeare, state_size=3)
-pickle.dump(shake_model, open( "save.shake", "wb" ))
 
 austen_model = markovify.Text(austen, state_size=3)
-pickle.dump(austen_model, open("save.austen", "wb"))
 
 ha_model = markovify.combine([austen_model, hem_model])
 pickle.dump(ha_model, open("save.ha", "wb"))
@@ -40,3 +37,5 @@ pickle.dump(hs_model, open( "save.hs", "wb" ))
 
 hf_model = markovify.combine([hem_model, faulkner_model])
 pickle.dump(hf_model, open( "save.hf", "wb" ))
+
+print("done")

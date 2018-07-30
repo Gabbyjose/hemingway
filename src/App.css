@@ -37,6 +37,11 @@ button {
   border: none;
   font-size: 1em;
   cursor: auto;
+  font-family: "Lucida Calligraphy", "American Typerwriter", cursive;
+}
+
+button:focus {
+  outline:0;
 }
 
 .words {
@@ -62,7 +67,22 @@ button {
   left: 25%;
 }
 
+.buttons {
+  padding-top: 2em
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width: 768px) {
+  .pen {
+    display: none
+  }
+
+  .paper {
+    width: 70%;
+    left: 15%;
+  }
 }
