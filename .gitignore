@@ -21,9 +21,7 @@ yarn-debug.log*
 yarn-error.log*
 
 #models
-save.austen
-save.faulk
 save.ha
 save.hem
 save.hf
-save.shake
+save.hs
